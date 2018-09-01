@@ -1,0 +1,17 @@
+html,body{
+    min-height:100%;
+    font-family: Georgia;
+}
+
+.header{
+    background-color: #202020;
+}
+
+td{
+    border: 1px solid black;
+}
+
+th{
+    padding-top: 20px;
+}
+

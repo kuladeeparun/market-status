@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{template "_head.html" "Big Winners"}}
+    <body>
+        <div class="container">
+            {{template "_header.html"}}
+            
+            <div class="row text-center">     
+                <table>
+                    <caption>Data as on {{.Time}}</caption>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Series</th>
+                        <th>Open Price</th>
+                        <th>High Price</th>
+                        <th>Low Price</th>
+                        <th>LTP</th>
+                        <th>Previous Price</th>
+                        <th>Net Price</th>
+                        <th>Traded Quantity</th>
+                        <th>Turnover In Lakhs</th>
+                        <th>Last Corp Announcement Date</th>
+                        <!-- <th>Last Corp Announcement</th> -->
+                    </tr>           
+                    {{ with .Data }}
+                        {{ range . }}
+                            <tr>
+                                <td>{{ .Symbol }}</td>
+                                <td>{{ .Series }}</td>
+                                <td>{{ .OpenPrice }}</td>
+                                <td>{{ .HighPrice }}</td>
+                                <td>{{ .LowPrice }}</td>
+                                <td>{{ .Ltp }}</td>
+                                <td>{{ .PreviousPrice }}</td>
+                                <td>{{ .NetPrice }}</td>
+                                <td>{{ .TradedQuantity }}</td>
+                                <td>{{ .TurnoverInLakhs }}</td>
+                                <td>{{ .LastCorpAnnouncementDate }}</td>
+                                <!-- <td>{{ .LastCorpAnnouncement }}</td> -->
+                            </tr>
+                        {{ end }} 
+                    {{ end }}
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
